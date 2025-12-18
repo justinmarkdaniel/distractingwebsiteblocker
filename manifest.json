@@ -26,6 +26,7 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
+  "incognito": "spanning",
   "web_accessible_resources": [
     {
       "resources": ["blocked.html", "blocked.js"],
