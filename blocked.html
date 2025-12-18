@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Flow - Stay Focused</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+            position: relative;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 700px;
+            padding: 40px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .icon {
+            font-size: 64px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .quote {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.95);
+            letter-spacing: -0.5px;
+        }
+
+        .author {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+            margin-bottom: 48px;
+        }
+
+        .message {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-top: 48px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .site-name {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.25);
+            margin-top: 16px;
+            font-family: monospace;
+        }
+
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 50%, rgba(15, 52, 96, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient"></div>
+    <div class="container">
+        <div class="icon">&#10024;</div>
+        <p class="quote" id="quote"></p>
+        <p class="author" id="author"></p>
+        <p class="message">This site is blocked to help you focus</p>
+        <p class="site-name" id="siteName"></p>
+    </div>
+    <script src="blocked.js"></script>
+</body>
+</html>

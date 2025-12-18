@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Flow</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Focus Flow</h1>
+            <p class="subtitle">Block distractions. Stay inspired.</p>
+        </div>
+
+        <div class="section">
+            <label for="siteInput">Add site to block</label>
+            <input
+                type="text"
+                id="siteInput"
+                class="input-field"
+                placeholder="e.g. twitter.com, reddit.com"
+                autocomplete="off"
+            />
+            <button id="blockSite" class="btn btn-primary">Block Site</button>
+            <div id="status" class="status-message"></div>
+        </div>
+
+        <div class="section blocked-sites">
+            <h3>Blocked Sites</h3>
+            <div id="siteList" class="site-list">
+                <p class="empty-state">No sites blocked yet</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Stay focused. Build something great.</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
